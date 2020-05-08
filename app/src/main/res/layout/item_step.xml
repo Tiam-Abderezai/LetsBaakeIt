@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="step"
+            type="com.example.letsbakeit.model.Step" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/StepRootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:id="@+id/tv_step_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:id="@+id/tv_step_sh_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_below="@id/tv_step_number"
+            />
+
+        <TextView
+            android:id="@+id/tv_step_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_below="@id/tv_step_sh_desc"
+            />
+
+    </RelativeLayout>
+</layout>

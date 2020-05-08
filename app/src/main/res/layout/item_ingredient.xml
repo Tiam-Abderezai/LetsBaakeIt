@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="ingredient"
+            type="com.example.letsbakeit.model.Ingredient" />
+    </data>
+    <RelativeLayout
+        android:id="@+id/IngredientRootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:id="@+id/tv_ingredient_ingredient"
+            android:text="@{ingredient.mIngredient}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:id="@+id/tv_ingredient_quantity"
+            android:text="@{Double.toString(ingredient.mQuantity)}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_below="@id/tv_ingredient_ingredient"
+            />
+
+        <TextView
+            android:id="@+id/tv_ingredient_measure"
+            android:text="@{ingredient.mMeasure}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_below="@+id/tv_ingredient_quantity"
+            />
+
+
+    </RelativeLayout>
+</layout>
